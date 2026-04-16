@@ -422,7 +422,23 @@
     stroke: #ffffff;
     stroke-width: 1;
     pointer-events: auto;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, stroke 0.2s ease, stroke-width 0.2s ease, fill-opacity 0.2s ease;
+  }
+
+  .station-overlay circle:focus {
+    outline: none;
+  }
+
+  .station-overlay circle.selected {
+    stroke: #ffffff;
+    stroke-width: 2.25;
+    fill-opacity: 0.8;
+  }
+
+  .station-overlay circle:focus-visible {
+    outline: none;
+    stroke: #ffffff;
+    stroke-width: 2.25;
   }
 
   .station-overlay:has(circle.selected) circle:not(.selected) {
